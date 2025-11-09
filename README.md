@@ -42,17 +42,65 @@ https://github.com/user-attachments/assets/3ec06ff8-0bdf-4ad5-be71-2ec490b7ee27
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation and Running
 
-### On your Linux Machine (Will act as MCP Server)
+### On your Kali Machine
 ```bash
 git clone https://github.com/Wh0am123/MCP-Kali-Server.git
 cd MCP-Kali-Server
+pip install -r requirements.txt
 python3 kali_server.py
 ```
 
-### On your MCP Client (You can run on Windows or Linux)
-- You will want to run `python3 /absolute/path/to/mcp_server.py http://LINUX_IP:5000`
+**Command Line Options:**
+- `--ip <address>`: Specify the IP address to bind the server to (default: `127.0.0.1` for localhost only)
+  - Use `127.0.0.1` for local connections only (secure, recommended)
+  - Use `0.0.0.0` to allow connections from any network interface (very dangerous; use with caution)
+  - Use a specific IP address to bind to a particular network interface
+- `--port <port>`: Specify the port number (default: `5000`)
+- `--debug`: Enable debug mode for verbose logging
+
+**Examples:**
+```bash
+# Run on localhost only (secure, default)
+python3 kali_server.py
+
+# Run on all interfaces (less secure, useful for remote access)
+python3 kali_server.py --ip 0.0.0.0
+
+# Run on a specific IP and custom port
+python3 kali_server.py --ip 192.168.1.100 --port 8080
+
+# Run with debug mode
+python3 kali_server.py --debug
+```
+
+### On your MCP client machine (can be local or remote)
+
+```bash
+git clone https://github.com/Wh0am123/MCP-Kali-Server.git
+cd MCP-Kali-Server
+pip install -r requirements.txt
+```
+
+If you're running the client and server on the same machine:
+
+```bash
+./mcp_server.py --server http://127.0.0.1:5000
+```
+
+If separate machines, create an ssh tunnel to your Kali MCP server, then launch the client:
+
+```bash
+ssh -L 5000:localhost:5000 user@KALI_IP
+./mcp_server.py --server http://127.0.0.1:5000
+```
+
+NOTE: If you're openly hosting the Kali MCP server on your network (`kali_server --IP...`), you don't need the SSH tunnel ⚠️(this is highly discouraged)⚠️.
+
+```bash
+./mcp_server.py --server http://LINUX_IP:5000
+```
 
 #### Configuration for claude desktop:
 edit (C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json)
