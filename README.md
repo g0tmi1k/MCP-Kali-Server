@@ -1,6 +1,6 @@
 # MCP Kali Server
 
-**Kali MCP Server** is a lightweight API bridge that connects MCP Clients (e.g: Claude Desktop, [5ire](https://github.com/nanbingxyz/5ire)) to the API server which allows executing commands on a Linux terminal.
+**Kali MCP Server** is a lightweight API bridge that connects MCP Clients (e.g: Claude Desktop or [5ire](https://github.com/nanbingxyz/5ire)) to the API server which allows executing commands on a Linux terminal.
 
 This allows the MCP to run terminal commands like `nmap`, `nxc` or any other tool, interact with web applications using tools like `curl`, `wget`, `gobuster`. 
 And perform **AI-assisted penetration testing**, solving **CTF web challenge** in real time, helping in **solving machines from HTB or THM**.
@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/3ec06ff8-0bdf-4ad5-be71-2ec490b7ee27
 
 ## 🚀 Features
 
-- 🧠 **AI Endpoint Integration**: Connect your kali to any MCP of your liking such as claude desktop or 5ier.
+- 🧠 **AI Endpoint Integration**: Connect your Kali to any MCP of your liking such as Claude Desktop or 5ier.
 - 🖥️ **Command Execution API**: Exposes a controlled API to execute terminal commands on your Kali Linux machine.
 - 🕸️ **Web Challenge Support**: AI can interact with websites and APIs, capture flags via `curl` and any other tool AI the needs.
 - 🔐 **Designed for Offensive Security Professionals**: Ideal for red teamers, bug bounty hunters, or CTF players automating common tasks.
@@ -104,9 +104,9 @@ NOTE: If you're openly hosting the Kali MCP server on your network (`kali_server
 ./mcp_server.py --server http://LINUX_IP:5000
 ```
 
-#### Configuration for Claude desktop:
+#### Configuration for Claude Desktop:
 
-edit (C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json)
+Edit (`C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json`)
 
 ```json
 {
