@@ -1,6 +1,6 @@
 # MCP Kali Server
 
-**Kali MCP Server** is a lightweight API bridge that connects MCP Clients (e.g: Claude Desktop, [5ire](https://github.com/nanbingxyz/5ire)) to the API server which allows excuting commands on a Linux terminal.
+**Kali MCP Server** is a lightweight API bridge that connects MCP Clients (e.g: Claude Desktop, [5ire](https://github.com/nanbingxyz/5ire)) to the API server which allows executing commands on a Linux terminal.
 
 This allows the MCP to run terminal commands like `nmap`, `nxc` or any other tool, interact with web applications using tools like `curl`, `wget`, `gobuster`. 
  And perform **AI-assisted penetration testing**, solving **CTF web challenge** in real time, helping in **solving machines from HTB or THM**.
@@ -125,7 +125,7 @@ edit (C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json)
 
 ## 🔮 Other Possibilities
 
-There are more possibilites than described since the AI model can now execute commands on the terminal. Here are some example:
+There are more possibilities than described since the AI model can now execute commands on the terminal. Here are some example:
 
 - Memory forensics using Volatility
   - Automating memory analysis tasks such as process enumeration, DLL injection checks, and registry extraction from memory dumps.
